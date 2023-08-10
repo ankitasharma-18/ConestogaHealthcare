@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './ManageAppointment.css';
 import { Link } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
 
 const ManageAppointment = () => {
   const [appointments, setAppointments] = useState([]);
@@ -31,18 +29,17 @@ const ManageAppointment = () => {
 
   return (
     <div className="manage-appointment">
-      <Header />
-
       <h1>Manage Appointments</h1>
       <div className="options">
         <button>
           <Link to="/ViewAppointments">View Appointments</Link>
         </button>
-        <button onClick={() => console.log('Option 2 clicked')}>
-          Update Appointment
+        <button>
+        <Link to="/UpdateAppointment">Update Appointments</Link>
+        
         </button>
-        <button onClick={() => console.log('Option 3 clicked')}>
-          Delete Appointment
+        <button>
+        <Link to="/DeleteAppointment">Delete Appointments</Link>
         </button>
       </div>
 
@@ -77,9 +74,8 @@ const ManageAppointment = () => {
           </tbody>
         </table>
       ) : (
-        <p>No appointments found.</p>
+        <p></p>
       )}
-      <Footer />
     </div>
   );
 };

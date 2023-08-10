@@ -6,7 +6,7 @@ body {
 }
 main {
   display: flex;
-  height: 40vh;
+ 
 }
 .content {
   background-color: #004084;
@@ -30,8 +30,9 @@ main {
   background-color: #188b89;
   color: #fff;
   text-decoration: none;
-  border-radius: 4px;
-  border: none;
+  border-radius: 40px;
+  padding: 20px;
+  border:none;
   font-size: 20px;
   cursor: pointer;
 }
@@ -77,4 +78,12 @@ main {
 }
 .about h3 {
   color: rgb(52, 52, 52);
+}
+
+@media only screen and (max-width: 700px) {
+  h2,
+  .about,
+  .buttons {
+    display: none;
+  }
 }
